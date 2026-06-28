@@ -1,1 +1,6 @@
 /* BATARA PROJECT */
+.card{
+    display:block;
+    text-decoration:none;
+    color:inherit;
+}
