@@ -4,21 +4,35 @@
     text-decoration:none;
     color:inherit;
 }
+.card{
+    display:block;
+    text-decoration:none;
+    color:inherit;
+}
 
 .produk-header{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 15px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:15px;
 }
 
 .produk-logo{
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    flex-shrink: 0;
+    width:70px !important;
+    height:70px !important;
+    max-width:70px !important;
+    max-height:70px !important;
+    object-fit:contain;
+    flex-shrink:0;
+}
+
+.produk-header img{
+    width:70px !important;
+    height:70px !important;
+    max-width:70px !important;
+    max-height:70px !important;
 }
 
 .produk-header h3{
-    margin: 0;
+    margin:0;
 }
