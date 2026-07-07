@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KOCI & JPTM - Solusi Bisnis Pulsa & PPOB Terpercaya</title>
+    <title>Batara Payment Network - Solusi Bisnis Pulsa & PPOB</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -22,7 +22,7 @@
         /* Navbar Style */
         header { background-color: var(--white); box-shadow: 0 2px 4px rgba(0,0,0,0.02); position: sticky; top: 0; z-index: 100; }
         .nav-container { display: flex; justify-content: center; align-items: center; padding: 15px 0; }
-        .logo-img { max-height: 50px; width: auto; } /* Ukuran logo KOCI menyesuaikan */
+        .logo-img { max-height: 55px; width: auto; border-radius: 50%; } 
         
         /* Hero Section */
         .hero { padding: 60px 0; text-align: center; background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); }
@@ -34,9 +34,15 @@
         .section { padding: 50px 0; }
         .section-title { text-align: center; font-size: 26px; color: var(--primary); margin-bottom: 30px; font-weight: 700; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .card { background-color: var(--white); padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border: 1px solid #e2e8f0; }
+        
+        /* Card Style */
+        .card { background-color: var(--white); padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border: 1px solid #e2e8f0; text-align: center; }
+        .card-logo { max-height: 70px; margin-bottom: 15px; border-radius: 12px; } /* Style untuk logo aplikasi */
         .card h3 { font-size: 20px; color: var(--primary); margin-bottom: 10px; }
-        .card p { color: var(--text-light); font-size: 15px; }
+        .card p { color: var(--text-light); font-size: 15px; text-align: left; }
+        
+        /* Features Section khusus rata kiri */
+        .features-grid .card { text-align: left; }
         
         /* CTA Section */
         .cta-section { background-color: var(--primary); color: var(--white); text-align: center; padding: 50px 0; }
@@ -52,7 +58,8 @@
 
     <header>
         <div class="container nav-container">
-            <img src="koci.png" alt="Logo KOCI" class="logo-img">
+            <!-- Memanggil file gambar logo utama Anda -->
+            <img src="FB_IMG_1782488065252.jpg" alt="Logo Utama" class="logo-img">
         </div>
     </header>
 
@@ -60,6 +67,7 @@
         <div class="container">
             <h1>Mulai Bisnis Pulsa Sendiri.<br>Praktis & Untung Maksimal!</h1>
             <p>Jadikan smartphone Anda mesin pencetak penghasilan tambahan bersama sistem aplikasi yang modern, stabil, dan mudah dipahami oleh siapa saja.</p>
+            <!-- GANTI NOMOR WA DI BAWAH INI -->
             <a href="https://wa.me/6285724159878" class="btn" target="_blank">🚀 Hubungi Kami via WhatsApp</a>
         </div>
     </section>
@@ -68,17 +76,58 @@
         <div class="container">
             <h2 class="section-title">Pilihan Aplikasi & Program</h2>
             <div class="grid">
+                <!-- KOTAK 1: KOCI JPTM -->
                 <div class="card">
-                    <h3>Aplikasi KOCI</h3>
-                    <p>Satu aplikasi pintar dalam genggaman untuk segala kebutuhan transaksi digital pelanggan Anda. Mulai dari pulsa reguler, paket data internet, token listrik PLN, hingga pembayaran tagihan bulanan secara aman.</p>
+                    <!-- Memanggil logo KOCI -->
+                    <img src="koci.png" alt="Logo KOCI" class="card-logo">
+                    <h3>KOCI Jualan Pulsa Tanpa Modal</h3>
+                    <p>Satu aplikasi pintar dalam genggaman untuk segala kebutuhan transaksi digital tanpa terkendala biaya awal. Mulai dari pulsa reguler, paket data internet, token listrik PLN, hingga pembayaran tagihan bulanan secara aman.</p>
                 </div>
+                <!-- KOTAK 2: CENTRA RELOAD -->
                 <div class="card">
-                    <h3>Program JPTM</h3>
-                    <p>Jualan Pulsa Tanpa Modal. Solusi terbaik bagi Anda yang ingin merintis usaha tanpa terkendala biaya awal. Sistem keagenan transparan, minim risiko, dan langsung bisa berjalan hari ini.</p>
+                    <!-- Memanggil logo Centra -->
+                    <img src="centra.png" alt="Logo Centra" class="card-logo">
+                    <h3>Centra Reload</h3>
+                    <p>Platform andalan untuk transaksi pulsa dan PPOB yang cepat dan stabil. Sistem keagenan transparan, minim risiko, dengan harga produk yang kompetitif untuk memaksimalkan keuntungan Anda setiap hari.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="section" style="background-color: var(--white);">
-        <div class
+        <div class="container">
+            <h2 class="section-title">Mengapa Memilih Kami?</h2>
+            <div class="grid features-grid">
+                <div class="card">
+                    <h3>Metode Pembayaran Kekinian</h3>
+                    <p>Proses transaksi dan pengisian saldo jauh lebih mulus karena mendukung penuh sistem otomatisasi melalui scan QRIS serta transfer hemat menggunakan jaringan BI-FAST.</p>
+                </div>
+                <div class="card">
+                    <h3>Top-Up E-Wallet Terlengkap</h3>
+                    <p>Permudah pelanggan sekitar Anda untuk melakukan pengisian saldo dompet digital populer mulai dari DANA, GoPay, OVO, LinkAja, hingga rekening bank digital modern seperti SeaBank dan wondr by BNI.</p>
+                </div>
+                <div class="card">
+                    <h3>Harga & Margin Bersaing</h3>
+                    <p>Dapatkan harga produk digital dasar yang kompetitif untuk memastikan margin keuntungan Anda tetap lega dan kompetitif di pasar lokal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Siap Mengembangkan Usaha Anda?</h2>
+            <p>Jangan tunda peluang emas ini. Mari bergabung bersama ratusan agen lainnya yang telah membuktikan kemudahannya.</p>
+            <!-- GANTI NOMOR WA DI BAWAH INI -->
+            <a href="https://wa.me/6285724159878" class="btn btn-white" target="_blank">💬 Daftar / Tanya Admin via WhatsApp</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Batara Payment Network. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
