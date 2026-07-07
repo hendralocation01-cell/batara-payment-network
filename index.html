@@ -1,281 +1,84 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>BATARA PROJECT</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
-scroll-behavior:smooth;
-}
-
-body{
-background:#eef7ff;
-color:#222;
-}
-
-header{
-background:linear-gradient(135deg,#0057d8,#00b8ff);
-color:#fff;
-padding:70px 20px;
-text-align:center;
-}
-
-.logo{
-width:140px;
-height:140px;
-border-radius:50%;
-border:5px solid #FFD700;
-object-fit:cover;
-box-shadow:0 0 25px rgba(255,215,0,.6);
-margin-bottom:20px;
-}
-
-header h1{
-font-size:40px;
-margin-bottom:10px;
-}
-
-header p{
-font-size:18px;
-margin-bottom:25px;
-}
-
-.btn{
-display:inline-block;
-background:#FFD700;
-color:#000;
-padding:15px 35px;
-text-decoration:none;
-font-weight:bold;
-border-radius:40px;
-}
-
-section{
-max-width:1200px;
-margin:auto;
-padding:70px 20px;
-}
-
-.judul{
-text-align:center;
-font-size:34px;
-color:#0057d8;
-margin-bottom:40px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:20px;
-}
-
-.card{
-background:#fff;
-padding:30px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-.card h3{
-margin-bottom:15px;
-color:#0057d8;
-}
-
-.stat{
-background:#0057d8;
-color:#fff;
-padding:30px;
-text-align:center;
-border-radius:20px;
-}
-
-footer{
-background:#001b4d;
-color:white;
-text-align:center;
-padding:40px 20px;
-}
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 22px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-box-shadow:0 10px 20px rgba(0,0,0,.2);
-}
-.trust{
-    margin-top:30px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:12px;
-}
-
-.trust div{
-    background:rgba(255,255,255,0.18);
-    color:#fff;
-    padding:12px 22px;
-    border-radius:30px;
-    font-weight:bold;
-    width:260px;
-    text-align:center;
-    border:1px solid rgba(255,255,255,0.3);
-}
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOCI & JPTM - Solusi Bisnis Pulsa & PPOB Terpercaya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-light: #3b82f6;
+            --accent: #10b981;
+            --text-dark: #0f172a;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+        .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Navbar Style */
+        header { background-color: var(--white); box-shadow: 0 2px 4px rgba(0,0,0,0.02); position: sticky; top: 0; z-index: 100; }
+        .nav-container { display: flex; justify-content: center; align-items: center; padding: 15px 0; }
+        .logo-img { max-height: 50px; width: auto; } /* Ukuran logo KOCI menyesuaikan */
+        
+        /* Hero Section */
+        .hero { padding: 60px 0; text-align: center; background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); }
+        .hero h1 { font-size: 32px; font-weight: 700; color: var(--primary); margin-bottom: 15px; line-height: 1.3; }
+        .hero p { font-size: 16px; color: var(--text-light); max-width: 600px; margin: 0 auto 25px auto; }
+        .btn { display: inline-block; background-color: var(--accent); color: var(--white); padding: 12px 25px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(16, 185, 129, 0.2); }
+        
+        /* Services Section */
+        .section { padding: 50px 0; }
+        .section-title { text-align: center; font-size: 26px; color: var(--primary); margin-bottom: 30px; font-weight: 700; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .card { background-color: var(--white); padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border: 1px solid #e2e8f0; }
+        .card h3 { font-size: 20px; color: var(--primary); margin-bottom: 10px; }
+        .card p { color: var(--text-light); font-size: 15px; }
+        
+        /* CTA Section */
+        .cta-section { background-color: var(--primary); color: var(--white); text-align: center; padding: 50px 0; }
+        .cta-section h2 { font-size: 26px; margin-bottom: 15px; }
+        .cta-section p { margin-bottom: 25px; opacity: 0.9; font-size: 15px; }
+        .btn-white { background-color: var(--white); color: var(--primary); }
+        
+        /* Footer */
+        footer { background-color: #0f172a; color: #94a3b8; text-align: center; padding: 20px 0; font-size: 14px; }
+    </style>
 </head>
-
 <body>
 
-<header>
+    <header>
+        <div class="container nav-container">
+            <img src="koci.png" alt="Logo KOCI" class="logo-img">
+        </div>
+    </header>
 
-<img src="FB_IMG_1782488065252.jpg" class="logo">
+    <section class="hero">
+        <div class="container">
+            <h1>Mulai Bisnis Pulsa Sendiri.<br>Praktis & Untung Maksimal!</h1>
+            <p>Jadikan smartphone Anda mesin pencetak penghasilan tambahan bersama sistem aplikasi yang modern, stabil, dan mudah dipahami oleh siapa saja.</p>
+            <a href="https://wa.me/6285724159878" class="btn" target="_blank">🚀 Hubungi Kami via WhatsApp</a>
+        </div>
+    </section>
 
-<h1>BATARA PAYMENT NETWORK</h1>
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Pilihan Aplikasi & Program</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Aplikasi KOCI</h3>
+                    <p>Satu aplikasi pintar dalam genggaman untuk segala kebutuhan transaksi digital pelanggan Anda. Mulai dari pulsa reguler, paket data internet, token listrik PLN, hingga pembayaran tagihan bulanan secara aman.</p>
+                </div>
+                <div class="card">
+                    <h3>Program JPTM</h3>
+                    <p>Jualan Pulsa Tanpa Modal. Solusi terbaik bagi Anda yang ingin merintis usaha tanpa terkendala biaya awal. Sistem keagenan transparan, minim risiko, dan langsung bisa berjalan hari ini.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<p>Payment Network & Digital Solution</p>
-
-<a href="https://wa.me/6285724159878?text=Hai%20aku%20ingin%20bergabung%20menjadi%20mitra%20BATARA%20PROJECT" class="btn">Gabung Sekarang</a>
-<div class="trust">
-    <div>✅ Support Setiap Hari</div>
-    <div>⚡ Registrasi Cepat</div>
-    <div>🔒 Aman & Terpercaya</div>
-</div>
-</header>
-<section>
-
-<h2 class="judul">Produk & Layanan</h2>
-
-<div class="grid">
-    <div class="card">
-<a 
-    href="https://wa.me/6285724159878?text=Hai%20aku%20ingin%20ikut%20program%20JPTM">
-
-<div class="produk-header">
-<img src="koci.png" class="produk-logo" alt="KOCI">
-<h3>JPTM / KOCI</h3>
-</div>
-
-<p>Jualan Pulsa Tanpa Modal. Dapatkan penghasilan dari setiap transaksi tanpa perlu stok atau modal besar.</p>
-
-</a>
-</div>
-
-
-
-<a href="https://wa.me/6285724159878?text=Hai%20aku%20ingin%20bergabung%20menjadi%20mitra%20CENTRA%20RELOAD" class="card">
-    <div class="produk-header">
-    <img src="centra.png" class="produk-logo">
-    <h3>CENTRA RELOAD</h3>
-</div>
-
-<p>Aplikasi PPOB & Multi Payment dengan harga kompetitif dan transaksi real time.</p>
-</a>
-
-<a href="https://wa.me/6285724159878?text=Hai%20aku%20ingin%20daftar%20QRIS%20Merchant" class="card">
-    <h3>💳 QRIS Merchant</h3>
-    <p>Registrasi QRIS untuk UMKM, toko, warung, dan berbagai jenis usaha dengan proses mudah.</p>
-</a>
-
-</div>⁸
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="judul">Mengapa Memilih BATARA PROJECT?</h2>
-
-<div class="grid">
-
-<div class="stat">
-<h2>100+</h2>
-<p>Produk Digital</p>
-</div>
-
-<div class="stat">
-<h2>24/7</h2>
-<p>Layanan Support</p>
-</div>
-
-<div class="stat">
-<h2>Real Time</h2>
-<p>Transaksi Cepat</p>
-</div>
-
-<div class="stat">
-<h2>Aman</h2>
-<p>Terpercaya</p>
-</div>
-
-</div>
-
-</section>
-<section>
-
-<h2 class="judul">Partner & Keunggulan</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>🤝 Official Partner</h3>
-<p>Bekerja sama dengan PT Technology Multy System (TMS) untuk menghadirkan layanan pembayaran digital yang aman dan terpercaya.</p>
-</div>
-
-<div class="card">
-<h3>💼 Peluang Usaha</h3>
-<p>Mulai bisnis PPOB, QRIS, Pulsa, dan produk digital dengan modal terjangkau dan keuntungan menarik.</p>
-</div>
-
-<div class="card">
-<h3>📞 Hubungi Kami</h3>
-<p>Siap membantu Anda menjadi mitra BATARA PROJECT.</p>
-<a href="https://wa.me/6285724159878" class="btn">Chat WhatsApp</a>
-</div>
-
-</div>
-
-</section>
-
-<footer>
-
-<h2>BATARA PROJECT</h2>
-
-<p>Payment Network • PPOB • QRIS • Digital Solution</p>
-
-<p style="margin-top:10px;">
-© 2026 BATARA PROJECT. All Rights Reserved.
-</p>
-
-</footer>
-
-<a class="whatsapp" href="https://wa.me/6285724159878">
-💬 WhatsApp
-</a>
-
-</body>
-</html>
+    <section class="section" style="background-color: var(--white);">
+        <div class
