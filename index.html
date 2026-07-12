@@ -4,117 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Batara Project | Solusi Digital Terpadu</title>
+    <!-- Menggunakan Font Modern -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --accent-color: #3498db;
-            --bg-color: #f4f7f6;
-            --text-color: #333;
-            --white: #ffffff;
+            --primary: #1a2a6c;
+            --secondary: #b21f1f;
+            --accent: #fdbb2d;
+            --text: #333;
         }
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-        header {
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-        header img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 4px solid var(--white);
-            margin-bottom: 1rem;
-        }
-        header h1 { margin: 0; font-size: 2.5rem; }
-        header p { font-size: 1.2rem; opacity: 0.9; }
+        body { font-family: 'Poppins', sans-serif; margin: 0; background: #f0f2f5; color: var(--text); }
         
-        .container {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+        header { 
+            background: linear-gradient(135deg, var(--primary), var(--secondary)); 
+            color: white; padding: 4rem 1rem; text-align: center; 
         }
-        .card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s ease;
+        header img { 
+            width: 140px; height: 140px; border-radius: 50%; 
+            border: 5px solid rgba(255,255,255,0.2); margin-bottom: 1rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
         }
-        .card:hover { transform: translateY(-10px); }
-        .card .icon-placeholder { 
-            width: 80px; 
-            height: 80px; 
-            background: #eee; 
-            margin: 0 auto 1rem; 
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
+        .bio { max-width: 650px; margin: 1rem auto; background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 15px; backdrop-filter: blur(5px); }
+
+        .container { max-width: 1000px; margin: -3rem auto 2rem; padding: 0 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        
+        .card { 
+            background: white; padding: 2rem; border-radius: 20px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08); text-align: center;
+            transition: 0.4s; border-bottom: 5px solid var(--accent);
         }
-        .card h3 { color: var(--primary-color); margin-bottom: 1rem; }
-        .btn {
-            display: inline-block;
-            margin-top: 1.5rem;
-            padding: 0.8rem 1.5rem;
-            background-color: var(--accent-color);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: background 0.3s;
+        .card:hover { transform: translateY(-15px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        
+        .btn { 
+            display: inline-block; margin-top: 1.5rem; padding: 0.8rem 2rem; 
+            background: var(--primary); color: white; text-decoration: none; 
+            border-radius: 50px; font-weight: 600; transition: 0.3s; 
         }
-        .btn:hover { background-color: #2980b9; }
-        footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #777; }
+        .btn:hover { background: var(--secondary); transform: scale(1.05); }
+
+        .social-section { text-align: center; padding: 3rem; }
+        .social-btn { 
+            margin: 0.5rem; padding: 0.8rem 1.5rem; background: white; 
+            border-radius: 10px; text-decoration: none; color: var(--primary);
+            font-weight: 600; box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="FB_IMG_1782488065252.jpg" alt="Logo Batara Project">
+        <img src="FB_IMG_1782488065252.jpg" alt="Logo">
         <h1>Batara Project</h1>
         <p>Solusi Digital untuk Kreativitas & Transaksi Anda</p>
+        <div class="bio">Kenapa pilih Batara Project? Kami adalah mitra strategis yang mengedepankan efisiensi, inovasi, dan kemudahan bagi bisnis Anda.</div>
     </header>
 
     <main class="container">
-        <!-- Creative Services -->
         <div class="card">
-            <div class="icon-placeholder">🎨</div>
-            <h3>Creative Services</h3>
-            <p>Jasa editing video, foto, dan branding profesional untuk kebutuhan konten Anda.</p>
-            <a href="https://wa.me/6285724159878?text=Hai%2C%20saya%20berminat%20dengan%20Jasa%20Creative%20Services%20Batara%20Project" class="btn">Pesan Jasa</a>
-        </div>
-
-        <!-- Digital Financial -->
-        <div class="card">
-            <div class="icon-placeholder">💸</div>
             <h3>Digital Financial</h3>
-            <p>Agen Pulsa & PPOB. JUAL PULSA TANPA MODAL atau cash dengan harga kompetitif.</p>
+            <p>Agen Pulsa & PPOB. Solusi bisnis cerdas dengan pilihan tanpa modal atau cash harga kompetitif.</p>
             <a href="https://wa.me/6285724159878?text=Hai%2C%20saya%20berminat%20registrasi%20aplikasi%20jualan%20Pulsa%20dan%20PPOB" class="btn">Daftar Mitra</a>
         </div>
-
-        <!-- Marketing Solutions -->
         <div class="card">
-            <div class="icon-placeholder">📢</div>
-            <h3>Marketing Solutions</h3>
-            <p>Layanan advertise strategis untuk meningkatkan jangkauan bisnis Anda.</p>
-            <a href="https://wa.me/6285724159878?text=Hai%2C%20saya%20berminat%20dengan%20layanan%20Marketing%20Advertise%20Batara%20Project" class="btn">Konsultasi Iklan</a>
+            <h3>Creative Services</h3>
+            <p>Jasa editing video, foto, dan branding profesional untuk kebutuhan konten agar tampil lebih menarik.</p>
+            <a href="https://wa.me/6285724159878?text=Hai%2C%20saya%20berminat%20dengan%20Jasa%20Creative%20Services%20Batara%20Project" class="btn">Pesan Jasa</a>
+        </div>
+        <div class="card">
+            <h3>Marketing & Guidance</h3>
+            <p>Layanan advertise strategis & bimbingan pembayaran digital yang simpel, mudah, dan terarah.</p>
+            <a href="https://wa.me/6285724159878?text=Hai%2C%20saya%20berminat%20dengan%20layanan%20Marketing%20dan%20Bimbingan%20Pembayaran%20Digital%20Batara%20Project" class="btn">Konsultasi Iklan</a>
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Batara Project. Semua hak dilindungi.</p>
-    </footer>
+    <section class="social-section">
+        <h3>Temukan Kami</h3>
+        <a href="#" class="social-btn">Facebook</a>
+        <a href="#" class="social-btn">Instagram</a>
+        <a href="#" class="social-btn">TikTok</a>
+    </section>
 </body>
 </html>
