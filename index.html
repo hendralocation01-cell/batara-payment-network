@@ -3,129 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Batara Payment Network - Solusi Bisnis Pulsa & PPOB</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Batara Project | Solusi Digital Terpadu</title>
     <style>
         :root {
-            --primary: #1e3a8a;
-            --primary-light: #3b82f6;
-            --accent: #10b981;
-            --text-dark: #0f172a;
-            --text-light: #64748b;
-            --bg-light: #f8fafc;
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f4f7f6;
+            --text-color: #333;
             --white: #ffffff;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
-        .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--white);
+            margin-bottom: 1rem;
+        }
+        header h1 { margin: 0; font-size: 2.5rem; }
+        header p { font-size: 1.2rem; opacity: 0.9; }
         
-        /* Navbar Style */
-        header { background-color: var(--white); box-shadow: 0 2px 4px rgba(0,0,0,0.02); position: sticky; top: 0; z-index: 100; }
-        .nav-container { display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 15px 0; }
-        .logo-img { max-height: 55px; width: auto; border-radius: 50%; margin-bottom: 8px; } 
-        .brand-title { font-size: 18px; font-weight: 700; color: var(--primary); letter-spacing: 0.5px; text-align: center; }
-        
-        /* Hero Section */
-        .hero { padding: 60px 0; text-align: center; background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); }
-        .hero h1 { font-size: 32px; font-weight: 700; color: var(--primary); margin-bottom: 15px; line-height: 1.3; }
-        .hero p { font-size: 16px; color: var(--text-light); max-width: 600px; margin: 0 auto 25px auto; }
-        .btn { display: inline-block; background-color: var(--accent); color: var(--white); padding: 12px 25px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(16, 185, 129, 0.2); }
-        
-        /* Services Section */
-        .section { padding: 50px 0; }
-        .section-title { text-align: center; font-size: 26px; color: var(--primary); margin-bottom: 30px; font-weight: 700; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        
-        /* Card Style */
-        .card { background-color: var(--white); padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border: 1px solid #e2e8f0; text-align: center; }
-        .card-logo { max-height: 70px; margin-bottom: 15px; border-radius: 12px; } 
-        .card h3 { font-size: 20px; color: var(--primary); margin-bottom: 10px; }
-        .card p { color: var(--text-light); font-size: 15px; text-align: left; }
-        
-        /* Features Section */
-        .features-grid .card { text-align: left; }
-        
-        /* CTA Section */
-        .cta-section { background-color: var(--primary); color: var(--white); text-align: center; padding: 50px 0; }
-        .cta-section h2 { font-size: 26px; margin-bottom: 15px; }
-        .cta-section p { margin-bottom: 25px; opacity: 0.9; font-size: 15px; }
-        .btn-white { background-color: var(--white); color: var(--primary); }
-        
-        /* Footer */
-        footer { background-color: #0f172a; color: #94a3b8; text-align: center; padding: 20px 0; font-size: 14px; }
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .card:hover { transform: translateY(-10px); }
+        .card .icon-placeholder { 
+            width: 80px; 
+            height: 80px; 
+            background: #eee; 
+            margin: 0 auto 1rem; 
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+        .card h3 { color: var(--primary-color); margin-bottom: 1rem; }
+        .btn {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--accent-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn:hover { background-color: #2980b9; }
+        footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #777; }
     </style>
 </head>
 <body>
-
     <header>
-        <div class="container nav-container">
-            <img src="FB_IMG_1782488065252.jpg" alt="Logo Utama" class="logo-img">
-            <!-- Headline Tambahan di Bawah Logo -->
-            <div class="brand-title">BATARA PAYMENT NETWORK</div>
-        </div>
+        <img src="FB_IMG_1782488065252.jpg" alt="Logo Batara Project">
+        <h1>Batara Project</h1>
+        <p>Solusi Digital untuk Kreativitas & Transaksi Anda</p>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <h1>Mulai Bisnis Pulsa Sendiri.<br>Praktis & Untung Maksimal!</h1>
-            <p>Jadikan smartphone Anda mesin pencetak penghasilan tambahan bersama sistem aplikasi yang modern, stabil, dan mudah dipahami oleh siapa saja.</p>
-            <!-- Tombol WA dengan Auto Text -->
-            <a href="https://wa.me/6285724159878?text=Hai,%20Saya%20berminat%20menjadi%20member%20Batara%20Payment" class="btn" target="_blank">🚀 Hubungi Kami via WhatsApp</a>
+    <main class="container">
+        <!-- Creative Services -->
+        <div class="card">
+            <div class="icon-placeholder">🎨</div>
+            <h3>Creative Services</h3>
+            <p>Jasa editing video, foto, dan branding profesional untuk kebutuhan konten Anda.</p>
+            <a href="https://wa.me/6285724159878?text=Hai%2C%20saya%20berminat%20dengan%20Jasa%20Creative%20Services%20Batara%20Project" class="btn">Pesan Jasa</a>
         </div>
-    </section>
 
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Pilihan Aplikasi & Program</h2>
-            <div class="grid">
-                <div class="card">
-                    <img src="koci.png" alt="Logo KOCI" class="card-logo">
-                    <h3>KOCI Jualan Pulsa Tanpa Modal</h3>
-                    <p>Satu aplikasi pintar dalam genggaman untuk segala kebutuhan transaksi digital tanpa terkendala biaya awal. Mulai dari pulsa reguler, paket data internet, token listrik PLN, hingga pembayaran tagihan bulanan secara aman.</p>
-                </div>
-                <div class="card">
-                    <img src="centra.png" alt="Logo Centra" class="card-logo">
-                    <h3>Centra Reload</h3>
-                    <p>Platform andalan untuk transaksi pulsa dan PPOB yang cepat dan stabil. Sistem keagenan transparan, minim risiko, dengan harga produk yang kompetitif untuk memaksimalkan keuntungan Anda setiap hari.</p>
-                </div>
-            </div>
+        <!-- Digital Financial -->
+        <div class="card">
+            <div class="icon-placeholder">💸</div>
+            <h3>Digital Financial</h3>
+            <p>Agen Pulsa & PPOB. JUAL PULSA TANPA MODAL atau cash dengan harga kompetitif.</p>
+            <a href="https://wa.me/6285724159878?text=Hai%2C%20saya%20berminat%20registrasi%20aplikasi%20jualan%20Pulsa%20dan%20PPOB" class="btn">Daftar Mitra</a>
         </div>
-    </section>
 
-    <section class="section" style="background-color: var(--white);">
-        <div class="container">
-            <h2 class="section-title">Mengapa Memilih Kami?</h2>
-            <div class="grid features-grid">
-                <div class="card">
-                    <h3>Metode Pembayaran Kekinian</h3>
-                    <p>Proses transaksi dan pengisian saldo jauh lebih mulus karena mendukung penuh sistem otomatisasi melalui scan QRIS serta transfer hemat menggunakan jaringan BI-FAST.</p>
-                </div>
-                <div class="card">
-                    <h3>Top-Up E-Wallet Terlengkap</h3>
-                    <p>Permudah pelanggan sekitar Anda untuk melakukan pengisian saldo dompet digital populer mulai dari DANA, GoPay, OVO, LinkAja, hingga rekening bank digital modern seperti SeaBank dan wondr by BNI.</p>
-                </div>
-                <div class="card">
-                    <h3>Harga & Margin Bersaing</h3>
-                    <p>Dapatkan harga produk digital dasar yang kompetitif untuk memastikan margin keuntungan Anda tetap lega dan kompetitif di pasar lokal.</p>
-                </div>
-            </div>
+        <!-- Marketing Solutions -->
+        <div class="card">
+            <div class="icon-placeholder">📢</div>
+            <h3>Marketing Solutions</h3>
+            <p>Layanan advertise strategis untuk meningkatkan jangkauan bisnis Anda.</p>
+            <a href="https://wa.me/6285724159878?text=Hai%2C%20saya%20berminat%20dengan%20layanan%20Marketing%20Advertise%20Batara%20Project" class="btn">Konsultasi Iklan</a>
         </div>
-    </section>
-
-    <section class="cta-section">
-        <div class="container">
-            <h2>Siap Mengembangkan Usaha Anda?</h2>
-            <p>Jangan tunda peluang emas ini. Mari bergabung bersama ratusan agen lainnya yang telah membuktikan kemudahannya.</p>
-            <!-- Tombol WA dengan Auto Text -->
-            <a href="https://wa.me/6285724159878?text=Hai,%20Saya%20berminat%20menjadi%20member%20Batara%20Payment" class="btn btn-white" target="_blank">💬 Daftar / Tanya Admin via WhatsApp</a>
-        </div>
-    </section>
+    </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2026 Batara Payment Network. All Rights Reserved.</p>
-        </div>
+        <p>&copy; 2026 Batara Project. Semua hak dilindungi.</p>
     </footer>
-
 </body>
 </html>
