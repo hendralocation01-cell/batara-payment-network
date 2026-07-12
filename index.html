@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Batara Project | Solusi Digital Terpadu</title>
-    <!-- Menggunakan Font Modern -->
+    <!-- Font Poppins untuk kesan modern -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -42,17 +42,22 @@
         }
         .btn:hover { background: var(--secondary); transform: scale(1.05); }
 
-        .social-section { text-align: center; padding: 3rem; }
+        .social-section { text-align: center; padding: 3rem 1rem; }
+        .social-links { 
+            display: flex; justify-content: center; gap: 10px; margin-top: 1rem; flex-wrap: wrap; 
+        }
         .social-btn { 
-            margin: 0.5rem; padding: 0.8rem 1.5rem; background: white; 
+            padding: 0.8rem 1.5rem; background: white; 
             border-radius: 10px; text-decoration: none; color: var(--primary);
             font-weight: 600; box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            min-width: 100px;
         }
+        footer { text-align: center; padding: 2rem; color: #777; font-size: 0.85rem; }
     </style>
 </head>
 <body>
     <header>
-        <img src="FB_IMG_1782488065252.jpg" alt="Logo">
+        <img src="FB_IMG_1782488065252.jpg" alt="Logo Batara Project">
         <h1>Batara Project</h1>
         <p>Solusi Digital untuk Kreativitas & Transaksi Anda</p>
         <div class="bio">Kenapa pilih Batara Project? Kami adalah mitra strategis yang mengedepankan efisiensi, inovasi, dan kemudahan bagi bisnis Anda.</div>
@@ -78,9 +83,15 @@
 
     <section class="social-section">
         <h3>Temukan Kami</h3>
-        <a href="#" class="social-btn">Facebook</a>
-        <a href="#" class="social-btn">Instagram</a>
-        <a href="#" class="social-btn">TikTok</a>
+        <div class="social-links">
+            <a href="#" class="social-btn">Facebook</a>
+            <a href="#" class="social-btn">Instagram</a>
+            <a href="#" class="social-btn">TikTok</a>
+        </div>
     </section>
+
+    <footer>
+        <p>@batara_project since 2020 | Dilindungi Hak Cipta</p>
+    </footer>
 </body>
 </html>
