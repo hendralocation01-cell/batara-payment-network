@@ -1,57 +1,47 @@
-/* BATARA PROJECT */
-.card{
-    display:block;
-    text-decoration:none;
-    color:inherit;
-}
-.card{
-    display:block;
-    text-decoration:none;
-    color:inherit;
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.produk-header{
-    display:flex;
-    align-items:center;
-    gap:15px;
-    margin-bottom:15px;
+body {
+    font-family: Arial, sans-serif;
+    padding: 15px;
+    background-color: #f9f9f9;
+    overflow-x: hidden; /* Mencegah layar geser ke samping */
 }
 
-.produk-logo{
-    width:70px !important;
-    height:70px !important;
-    max-width:70px !important;
-    max-height:70px !important;
-    object-fit:contain;
-    flex-shrink:0;
+.upgrade-section {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.produk-header img{
-    width:70px !important;
-    height:70px !important;
-    max-width:70px !important;
-    max-height:70px !important;
+h1 { font-size: 1.5rem; margin-bottom: 10px; }
+
+.paket-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-.produk-header h3{
-    margin:0;
+.card {
+    background: white;
+    text-decoration: none;
+    color: #333;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    display: block;
+    transition: transform 0.2s;
 }
-@media (max-width: 600px) {
-  /* Mengatur lebar container agar tidak melampaui layar */
-  .container, .card {
-    width: 90% !important;
-    margin: 0 auto !important;
-    padding: 10px !important;
-  }
 
-  /* Mengecilkan ukuran tulisan pada HP */
-  h2, h3 {
-    font-size: 1.2rem !important;
-  }
+.paket-starter { border-top: 5px solid #3498db; }
+.paket-digital { border-top: 5px solid #e67e22; }
 
-  /* Mengatur agar kotak paket lebih ramping */
-  .paket {
-    width: 100% !important;
-    font-size: 0.9rem !important;
-  }
-}
+.harga { font-weight: bold; font-size: 1.3rem; margin: 10px 0; color: #2c3e50; }
+
+ul { text-align: left; list-style: none; padding: 0; font-size: 0.9rem; }
+li { margin-bottom: 8px; }
+    
